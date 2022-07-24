@@ -24,7 +24,7 @@ def verify(index):
 
 numbers = [num for num in range(1, 21)]
 
-result_1 = binary_search(numbers,  20)
+result_1 = binary_search(numbers, 5)
 result_2 = binary_search(numbers,  25)
 
 verify(result_1)
