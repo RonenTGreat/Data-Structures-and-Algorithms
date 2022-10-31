@@ -22,5 +22,3 @@ print(test_3.twoSum([3, 3], 6))
 test_4 = Solution()
 print(test_4.twoSum([2, 5, 5, 4], 10))
 ```
-
-## 
