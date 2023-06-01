@@ -12,8 +12,8 @@ import java.util.Arrays;
  */
 public class StackArray {
     private int top;
-    private int[] array;
-    private int capacity;
+    private final int[] array;
+    private final int capacity;
 
     public StackArray(int capacity){
         this.top = -1;
@@ -29,7 +29,7 @@ public class StackArray {
      * @throws RuntimeException if the stack is already full
      */
     public void push(int element){
-        if(top == capacity - 1){
+        if(isFull()){
             throw new RuntimeException("Stack is full.");
         }
         array[++top] = element;
@@ -42,7 +42,7 @@ public class StackArray {
      * @throws RuntimeException if the stack is empty
      */
     public int pop(){
-        if(top == -1){
+        if(isEmpty()){
             throw new RuntimeException("Stack is empty");
         }
         int element = array[top];
@@ -57,7 +57,7 @@ public class StackArray {
      * @throws RuntimeException if the stack is empty
      */
     public int top(){
-        if(top == -1){
+        if(isEmpty()){
             throw new RuntimeException("Stack is empty");
         }
         return array[top];
@@ -90,3 +90,4 @@ public class StackArray {
         return Arrays.toString(array);
     }
 }
+
